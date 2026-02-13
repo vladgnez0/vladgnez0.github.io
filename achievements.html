@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Достижения — Гнездилов В.В.</title>
+  <meta name="description" content="Персональный сайт учителя информатики: материалы, проекты, новости, документы, контакты." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body data-page="achievements">
+<header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div class="t1 js-teacher-name"></div>
+          <div class="t2">Результативность работы</div>
+        </div>
+      </div>
+
+      <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+      <nav class="nav" id="siteNav" aria-label="Навигация">
+        <a class="navlink" data-page="home" href="index.html">Главная</a>
+        <a class="navlink" data-page="about" href="about.html">Обо мне</a>
+        <a class="navlink" data-page="materials" href="materials.html">Материалы</a>
+        <a class="navlink" data-page="projects" href="projects.html">Проекты</a>
+        <a class="navlink" data-page="tools" href="tools.html">Онлайн‑инструменты</a>
+        <a class="navlink" data-page="news" href="news.html">Новости</a>
+        <a class="navlink" data-page="norms" href="norms.html">Документы</a>
+        <a class="navlink" data-page="resources" href="resources.html">Ресурсы</a>
+        <a class="navlink" data-page="achievements" href="achievements.html">Достижения</a>
+        <a class="navlink" data-page="parents" href="parents.html">Родителям</a>
+        <a class="navlink" data-page="contacts" href="contacts.html">Контакты</a>
+      </nav>
+
+      <div class="actions">
+        <button class="btn ghost menu-btn" id="btnMenu" type="button" title="Меню">☰</button>
+        <button class="btn" id="btnTheme" type="button" title="Сменить тему">🌓 Тема</button>
+        <button class="btn primary" id="btnSearch" type="button" title="Поиск по сайту (или нажмите /)">🔎 Поиск <span class="kbd">/</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+<div class="section-head">
+      <h2>Результативность работы</h2>
+      <div class="hint">Достижения учителя и обучающихся (дипломы, грамоты, участие).</div>
+    </div>
+
+    <div class="grid">
+      <div class="card" style="padding:16px;">
+        <h3 style="margin:0 0 8px; font-size:15px; font-weight:1000;">Достижения учителя</h3>
+        <ul class="muted" id="achTeacher" style="margin:0; padding-left:18px; line-height:1.6;"></ul>
+        <div class="callout">Учитель года 2026г<div>
+      </div>
+      <div class="card" style="padding:16px;">
+        <h3 style="margin:0 0 8px; font-size:15px; font-weight:1000;">Достижения учащихся</h3>
+        <ul class="muted" id="achStudents" style="margin:0; padding-left:18px; line-height:1.6;"></ul>
+        <div class="callout">3ое студентов стали победителя конкурса "Русский медвежонок"</div>
+      </div>
+    </div>
+    <footer>
+      © <span id="year"></span> • <span class="js-teacher-name"></span>
+      <span class="muted">• Без рекламы • Без трекеров</span>
+    </footer>
+  </main>
+
+<div class="overlay" id="overlay" aria-hidden="true"></div>
+  <div class="modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Поиск по сайту">
+    <div class="modal-head">
+      <div class="modal-title">Поиск по сайту</div>
+      <button class="modal-close" id="closeSearch" type="button">Закрыть (Esc)</button>
+    </div>
+    <div class="modal-body">
+      <input class="input" id="siteSearch" type="search" placeholder="Введите запрос: безопасность, ОГЭ, HTML..." style="width:100%; border-radius:14px;" />
+      <div id="searchHint" class="muted" style="margin-top:10px; line-height:1.45;">
+        Подсказка: используйте <span class="kbd">/</span> чтобы быстро открыть поиск. Результаты включают материалы, проекты, новости, документы и ресурсы.
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

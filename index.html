@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Сайт учителя информатики — Гнездилов В.В.</title>
+  <meta name="description" content="Персональный сайт учителя информатики: материалы, проекты, новости, документы, контакты." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body data-page="home">
+<header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div class="t1 js-teacher-name"></div>
+          <div class="t2">Материалы • проекты • документы • контакты</div>
+        </div>
+      </div>
+
+      <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+      <nav class="nav" id="siteNav" aria-label="Навигация">
+        <a class="navlink" data-page="home" href="index.html">Главная</a>
+        <a class="navlink" data-page="about" href="about.html">Обо мне</a>
+        <a class="navlink" data-page="materials" href="materials.html">Материалы</a>
+        <a class="navlink" data-page="projects" href="projects.html">Проекты</a>
+        <a class="navlink" data-page="tools" href="tools.html">Онлайн‑инструменты</a>
+        <a class="navlink" data-page="news" href="news.html">Новости</a>
+        <a class="navlink" data-page="norms" href="norms.html">Документы</a>
+        <a class="navlink" data-page="resources" href="resources.html">Ресурсы</a>
+        <a class="navlink" data-page="achievements" href="achievements.html">Достижения</a>
+        <a class="navlink" data-page="parents" href="parents.html">Родителям</a>
+        <a class="navlink" data-page="contacts" href="contacts.html">Контакты</a>
+      </nav>
+
+      <div class="actions">
+        <button class="btn ghost menu-btn" id="btnMenu" type="button" title="Меню">☰</button>
+        <button class="btn" id="btnTheme" type="button" title="Сменить тему">🌓 Тема</button>
+        <button class="btn primary" id="btnSearch" type="button" title="Поиск по сайту (или нажмите /)">🔎 Поиск <span class="kbd">/</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+<div class="hero">
+      <div class="card hero-main">
+        <div class="hero-title">Персональный сайт учителя информатики</div>
+        <p class="hero-sub">
+          Для учеников — материалы и практикумы, для родителей — рекомендации, для коллег — ресурсы и документы.
+          На сайте есть поиск и готовые PDF‑материалы для печати.
+        </p>
+
+        <div class="pills">
+          <span class="pill"><span class="dot"></span> Программирование</span>
+          <span class="pill"><span class="dot g"></span> Веб‑разработка</span>
+          <span class="pill"><span class="dot o"></span> Цифровая безопасность</span>
+        </div>
+
+        <div class="pills" style="margin-top:14px">
+          <a class="btn primary" href="materials.html" style="text-decoration:none;">📚 Материалы (PDF)</a>
+          <a class="btn" href="tools.html" style="text-decoration:none;">🧪 Онлайн‑инструменты</a>
+          <a class="btn" href="contacts.html" style="text-decoration:none;">✉️ Обратная связь</a>
+          <button class="btn" id="btnSearch2" type="button">🔎 Поиск</button>
+        </div>
+
+      </div>
+
+      <aside class="card hero-side">
+        <div class="mini">
+          <h3>📌 Объявление</h3>
+          <p id="announceText">Загрузка…</p>
+          <div class="row">
+            <button class="a-btn primary" type="button" id="btnRotateAnnouncement">Другое</button>
+            <a class="a-btn" href="news.html">Все новости</a>
+          </div>
+        </div>
+
+        <div class="mini">
+          <h3>🗂️ Быстрые ссылки</h3>
+          <p class="muted">Материалы по темам и классам, документы, памятки.</p>
+          <div class="row">
+            <a class="a-btn primary" href="norms.html">Документы</a>
+            <a class="a-btn" href="parents.html">Родителям</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <section>
+     
+
+      <div class="list">
+        <div class="item" style="min-height:auto;">
+          <div class="badge"><span class="tag">Ученикам</span><span class="tag">PDF</span></div>
+          <h3>Материалы по темам</h3>
+          <p>Безопасность, веб‑разработка, Python, алгоритмы, ОГЭ. Фильтры по классу и типу.</p>
+          <div class="meta">
+            <div class="small">Поиск доступен в шапке</div>
+            <a class="a-btn primary" href="materials.html">Открыть</a>
+          </div>
+        </div>
+
+        <div class="item" style="min-height:auto;">
+          <div class="badge"><span class="tag">Родителям</span></div>
+          <h3>Рекомендации и FAQ</h3>
+          <p>Памятка по безопасности, ответы на частые вопросы и способы связи.</p>
+          <div class="meta">
+            <div class="small">Преемственность: школа ↔ семья</div>
+            <a class="a-btn primary" href="parents.html">Открыть</a>
+          </div>
+        </div>
+
+        <div class="item" style="min-height:auto;">
+          <div class="badge"><span class="tag">Коллегам</span></div>
+          <h3>Документы и ресурсы</h3>
+          <p>Нормативные ссылки, платформы, полезные ресурсы и место для ссылок на коллег.</p>
+          <div class="meta">
+            <div class="small">Без рекламы и всплывающих окон</div>
+            <a class="a-btn primary" href="resources.html">Открыть</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      © <span id="year"></span> • <span class="js-teacher-name"></span>
+      <span class="muted">• Без рекламы • Без трекеров</span>
+    </footer>
+  </main>
+
+<div class="overlay" id="overlay" aria-hidden="true"></div>
+  <div class="modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Поиск по сайту">
+    <div class="modal-head">
+      <div class="modal-title">Поиск по сайту</div>
+      <button class="modal-close" id="closeSearch" type="button">Закрыть (Esc)</button>
+    </div>
+    <div class="modal-body">
+      <input class="input" id="siteSearch" type="search" placeholder="Введите запрос: безопасность, ОГЭ, HTML..." style="width:100%; border-radius:14px;" />
+      <div id="searchHint" class="muted" style="margin-top:10px; line-height:1.45;">
+        Подсказка: используйте <span class="kbd">/</span> чтобы быстро открыть поиск. Результаты включают материалы, проекты, новости, документы и ресурсы.
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
