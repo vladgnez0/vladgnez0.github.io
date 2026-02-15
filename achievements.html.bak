@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Новости — Гнездилов В.В.</title>
+  <title>Портфолио — Гнездилов В.В.</title>
   <meta name="description" content="Персональный сайт учителя информатики: материалы, проекты, документы, контакты." />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
-<body data-page="news">
+<body data-page="portfolio">
 <header class="topbar">
   <div class="container">
     <div class="row">
       <div class="brand">
         <div class="name js-teacher-name">—</div>
-        <div class="role">Новостная лента</div>
+        <div class="role">Достижения и результативность</div>
       </div>
 
       <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
@@ -42,9 +42,21 @@
 <main>
   <div class="container">
 <section class="section">
-    <h2 class="h2">Новости</h2>
-    <p class="lead">Короткие обновления сайта и материалов.</p>
-    <div id="newsList" class="list"></div>
+    <h2 class="h2">Портфолио и достижения</h2>
+    <p class="lead">Результативность работы учителя и обучающихся (дипломы, грамоты, участие).</p>
+
+    <div class="grid2" style="margin-top:16px;">
+      <div class="card">
+        <h3>Достижения учителя</h3>
+        <ul class="small" id="achTeacher" style="margin:0; padding-left:18px;"></ul>
+        <div class="callout">Добавьте сканы грамот/сертификатов и ссылки на публикации.</div>
+      </div>
+      <div class="card">
+        <h3>Достижения учащихся</h3>
+        <ul class="small" id="achStudents" style="margin:0; padding-left:18px;"></ul>
+        <div class="callout">Указывайте год, конкурс и уровень (шк./мун./рег.).</div>
+      </div>
+    </div>
   </section>
     <footer>
       © <span id="year"></span> • <span class="js-teacher-name"></span> • <span class="small">Без рекламы • Без всплывающих окон</span>

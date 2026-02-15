@@ -77,6 +77,10 @@ function setupMenu(){
 function setActiveNav(){
   const page = document.body.dataset.page;
   $$(".navlink").forEach(a => a.classList.toggle("active", a.dataset.page === page));
+  if(!$(".navlink.active") && page !== "home"){
+    const h = $(".navlink[data-page='home']");
+    if(h) h.classList.add("active");
+  }
 }
 
 /* Common header text */
@@ -84,8 +88,20 @@ function renderHeaderProfile(){
   const p = window.SITE_PROFILE || {};
   $$(".js-teacher-name").forEach(el => el.textContent = p.teacherName || "Учитель информатики");
   $(".js-role") && ($(".js-role").textContent = p.role || "Учитель информатики");
+
+  const hp = $("#headerPhone");
+  const he = $("#headerEmail");
+  if(hp) hp.textContent = p.phone || "";
+  if(he) he.textContent = p.email || "";
+
+  const hc = $("#headerContacts");
+  if(hc){
+    const show = Boolean((p.phone||"").trim() || (p.email||"").trim());
+    hc.style.display = show ? "flex" : "none";
+  }
 }
 
+/* Footer year */
 /* Footer year */
 function setYear(){
   $("#year") && ($("#year").textContent = new Date().getFullYear());

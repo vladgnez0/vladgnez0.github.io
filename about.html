@@ -4,112 +4,113 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Обо мне — Гнездилов В.В.</title>
-  <meta name="description" content="Персональный сайт учителя информатики: материалы, проекты, новости, документы, контакты." />
+  <meta name="description" content="Персональный сайт учителя информатики: материалы, проекты, документы, контакты." />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body data-page="about">
 <header class="topbar">
-    <div class="topbar-inner">
+  <div class="container">
+    <div class="row">
       <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div>
-          <div class="t1 js-teacher-name"></div>
-          <div class="t2">Самопрезентация и информация об учителе</div>
-        </div>
+        <div class="name js-teacher-name">—</div>
+        <div class="role">Самопрезентация</div>
       </div>
 
       <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
       <nav class="nav" id="siteNav" aria-label="Навигация">
         <a class="navlink" data-page="home" href="index.html">Главная</a>
         <a class="navlink" data-page="about" href="about.html">Обо мне</a>
+        <a class="navlink" data-page="education" href="about.html#education">Образование</a>
+        <a class="navlink" data-page="portfolio" href="achievements.html">Портфолио</a>
         <a class="navlink" data-page="materials" href="materials.html">Материалы</a>
-        <a class="navlink" data-page="projects" href="projects.html">Проекты</a>
-        <a class="navlink" data-page="tools" href="tools.html">Онлайн‑инструменты</a>
-        <a class="navlink" data-page="news" href="news.html">Новости</a>
-        <a class="navlink" data-page="norms" href="norms.html">Документы</a>
-        <a class="navlink" data-page="resources" href="resources.html">Ресурсы</a>
-        <a class="navlink" data-page="achievements" href="achievements.html">Достижения</a>
         <a class="navlink" data-page="parents" href="parents.html">Родителям</a>
+        <a class="navlink" data-page="students" href="projects.html">Ученикам</a>
         <a class="navlink" data-page="contacts" href="contacts.html">Контакты</a>
       </nav>
 
       <div class="actions">
-        <button class="btn ghost menu-btn" id="btnMenu" type="button" title="Меню">☰</button>
-        <button class="btn" id="btnTheme" type="button" title="Сменить тему">🌓 Тема</button>
-        <button class="btn primary" id="btnSearch" type="button" title="Поиск по сайту (или нажмите /)">🔎 Поиск <span class="kbd">/</span></button>
-      </div>
-    </div>
-  </header>
-
-  <main class="wrap">
-<div class="section-head">
-      <h2>Самопрезентация</h2>
-      <div class="hint">Фото, цель сайта, образование и повышение квалификации.</div>
-    </div>
-
-    <div class="grid">
-      <div class="card" style="padding:16px;">
-        <div class="profile">
-          <div class="avatar"><img id="teacherPhoto" alt="Фото учителя" src="assets/img/teacher.svg"></div>
-          <div>
-            <h3 style="margin:0 0 6px; font-size:16px; font-weight:1000;"><span class="js-teacher-name"></span> — <span class="js-role"></span></h3>
-            <p id="bioShort" class="muted" style="margin:0;">—</p>
-            <div class="kv">
-              <div class="k"><b>Школа/кабинет:</b> <span id="aboutKvSchool">—</span></div>
-              <div class="k"><b>Почта:</b> <span id="aboutKvEmail">—</span></div>
-              <div class="k"><b>Телефон:</b> <span id="aboutKvPhone">—</span></div>
-              <div class="k"><b>Формат:</b> материалы • проекты • обратная связь</div>
-            </div>
-          </div>
+        <button class="btn small menu-btn" id="btnMenu" type="button" title="Меню">☰</button>
+        <div id="headerContacts">
+          <div class="c"><b id="headerPhone"></b></div>
+          <div class="c" id="headerEmail"></div>
         </div>
-
-        <div class="callout">
-          <b>Цель сайта:</b> <span id="siteGoal">—</span>
-        </div>
+        <button class="btn small primary" id="btnSearch" type="button">Поиск <span class="kbd">/</span></button>
       </div>
-
-      <div class="card" style="padding:16px;">
-        <h3 style="margin:0 0 8px; font-size:15px; font-weight:1000;">Образование и квалификация</h3>
-        <div class="grid" style="grid-template-columns:1fr 1fr;">
-          <div>
-            <div class="muted" style="font-weight:900; margin-bottom:6px;">Образование</div>
-            <ul class="muted" id="eduList" style="margin:0; padding-left:18px; line-height:1.6;"></ul>
-          </div>
-          <div>
-            <div class="muted" style="font-weight:900; margin-bottom:6px;">Повышение квалификации</div>
-            <ul class="muted" id="qualList" style="margin:0; padding-left:18px; line-height:1.6;"></ul>
-          </div>
-        </div>
-
-        <div class="muted" style="font-weight:900; margin:12px 0 6px;">Хобби</div>
-        <ul class="muted" id="hobbyList" style="margin:0; padding-left:18px; line-height:1.6;"></ul>
-
-       
-      </div>
-    </div>
-    <footer>
-      © <span id="year"></span> • <span class="js-teacher-name"></span>
-      <span class="muted">• Без рекламы • Без трекеров</span>
-    </footer>
-  </main>
-
-<div class="overlay" id="overlay" aria-hidden="true"></div>
-  <div class="modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Поиск по сайту">
-    <div class="modal-head">
-      <div class="modal-title">Поиск по сайту</div>
-      <button class="modal-close" id="closeSearch" type="button">Закрыть (Esc)</button>
-    </div>
-    <div class="modal-body">
-      <input class="input" id="siteSearch" type="search" placeholder="Введите запрос: безопасность, ОГЭ, HTML..." style="width:100%; border-radius:14px;" />
-      <div id="searchHint" class="muted" style="margin-top:10px; line-height:1.45;">
-        Подсказка: используйте <span class="kbd">/</span> чтобы быстро открыть поиск. Результаты включают материалы, проекты, новости, документы и ресурсы.
-      </div>
-      <div class="search-results" id="searchResults" aria-live="polite"></div>
     </div>
   </div>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</header>
+<main>
+  <div class="container">
+<section class="section">
+    <h2 class="h2">Обо мне</h2>
+    <p class="lead">Короткая самопрезентация, цель сайта и контакты.</p>
 
-  <script src="assets/data.js"></script>
-  <script src="assets/app.js"></script>
+    <div class="grid2" style="margin-top:16px;">
+      <div class="card">
+        <h3>Профиль</h3>
+        <div style="display:flex; gap:14px; align-items:flex-start;">
+          <div class="photo" style="width:170px; flex:0 0 auto;">
+            <img id="teacherPhoto" src="assets/img/teacher.svg" alt="Фото учителя">
+          </div>
+          <div>
+            <div style="font-family:var(--serif); font-weight:700; font-size:18px;"><span class="js-teacher-name"></span></div>
+            <div class="small" style="margin-top:2px;"><span class="js-role"></span></div>
+            <div class="hr"></div>
+            <div class="small"><b>Цель сайта:</b> <span id="siteGoal">—</span></div>
+            <div class="small" style="margin-top:6px;"><b>Коротко:</b> <span id="bioShort">—</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Контакты</h3>
+        <p class="small"><b>Школа/кабинет:</b> <span id="aboutKvSchool">—</span></p>
+        <p class="small"><b>Почта:</b> <span id="aboutKvEmail">—</span></p>
+        <p class="small"><b>Телефон:</b> <span id="aboutKvPhone">—</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <h2 class="h2">Образование и повышение квалификации</h2>
+    <p class="lead">Раздел для соответствия критериям «самопрезентация» и «результативность».</p>
+
+    <div class="grid2" style="margin-top:16px;">
+      <div class="card">
+        <h3>Образование</h3>
+        <ul class="small" id="eduList" style="margin:0; padding-left:18px;"></ul>
+      </div>
+      <div class="card">
+        <h3>Повышение квалификации</h3>
+        <ul class="small" id="qualList" style="margin:0; padding-left:18px;"></ul>
+        <div class="hr"></div>
+        <h3 style="margin-top:0;">Интересы</h3>
+        <ul class="small" id="hobbyList" style="margin:0; padding-left:18px;"></ul>
+      </div>
+    </div>
+  </section>
+    <footer>
+      © <span id="year"></span> • <span class="js-teacher-name"></span> • <span class="small">Без рекламы • Без всплывающих окон</span>
+    </footer>
+  </div>
+</main>
+<div class="overlay" id="overlay" aria-hidden="true"></div>
+<div class="modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Поиск по сайту">
+  <div class="modal-head">
+    <div class="modal-title">Поиск по сайту</div>
+    <button class="modal-close" id="closeSearch" type="button">Закрыть (Esc)</button>
+  </div>
+  <div class="modal-body">
+    <input class="input" id="siteSearch" type="search" placeholder="Введите запрос: безопасность, ОГЭ, HTML..." style="width:100%; border-radius:16px;" />
+    <div id="searchHint" class="small" style="margin-top:10px;">
+      Подсказка: нажмите <span class="kbd">/</span> чтобы открыть поиск. Результаты включают материалы, проекты, новости и документы.
+    </div>
+    <div class="search-results" id="searchResults" aria-live="polite"></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
 </body>
 </html>
